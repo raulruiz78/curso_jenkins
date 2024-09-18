@@ -12,12 +12,12 @@ pipeline {
             steps {
                 script {
                     // Obtener el año actual
-                    def año_actual = new Date().format("yyyy").toInteger()
+                    def anyo_actual = new Date().format("yyyy").toInteger()
                     // Obtener el año de nacimiento
-                    def año_nacimiento = env.fecha_nacimiento.toInteger()
+                    def anyo_nacimiento = env.fecha_nacimiento.toInteger()
 
                     // Calcular la edad
-                    def edad = año_actual - año_nacimiento
+                    def edad = anyo_actual - anyo_nacimiento
                     echo "La edad calculada es: ${edad}"
 
                     // Almacenar la edad para usarla en otro stage
